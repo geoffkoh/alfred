@@ -2,7 +2,6 @@
 
 # Standard imports
 import logging
-import requests
 
 # Third party imports
 from selenium import webdriver
@@ -62,10 +61,6 @@ class MyLeoDriver(DriverBase):
         logger.info('Login successful')
 
         # Creates the session and transfer cookies
-        self.session = requests.Session()
-        selenium_user_agent = self.driver.execute_script("return navigator.userAgent;")
-        self.session.headers.update({"user-agent": selenium_user_agent})
-        for cookie in self.driver.get_cookies():
-            self.session.cookies.set(cookie['name'], cookie['value'], domain=cookie['domain'])
+        self._setup_cookies()
 
     # end connect()
