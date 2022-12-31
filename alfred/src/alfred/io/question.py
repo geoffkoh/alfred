@@ -80,7 +80,7 @@ def create_from_file(filename: str) -> QuestionBank:
         else:
             curr_state = ParseState.NOT_QUESTION
 
-        logger.info('Current state %s', curr_state)
+        logger.debug('Current state %s', curr_state)
         # Parses the line depending on the curr state
         if curr_state == ParseState.QUESTION:
             question = MultipleChoiceQuestion()
