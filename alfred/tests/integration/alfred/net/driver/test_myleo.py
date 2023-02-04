@@ -1,5 +1,6 @@
 # Standard imports
 import logging
+import os
 
 # Third party imports
 import pytest
@@ -9,14 +10,18 @@ from alfred.net.driver.myleo import MyLeoDriver
 
 
 class TestMyLeoDriver:
-    """ Test class for MyLeoDriver """
+    """Test class for MyLeoDriver"""
 
+    @pytest.mark.skipif(
+        os.getenv("ALFRED_USERNAME") is None or os.getenv("ALFRED_PASS") is None,
+        reason="Username and password not given",
+    )
     def test_connect(self):
 
         driver = MyLeoDriver()
         driver.connect(
-            username=None,  # To replace with username
-            password=None  # To replace with password
+            username=os.getenv("ALFRED_USERNAME"),  # To replace with username
+            password=os.getenv("ALFRED_PASS"),  # To replace with password
         )
 
     # end test_connect()

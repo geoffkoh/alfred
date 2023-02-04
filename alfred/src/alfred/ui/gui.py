@@ -5,7 +5,7 @@ from dataclasses import asdict
 import logging
 from pprint import pformat
 import queue
-        
+
 # Third party imports
 import tkinter as tk
 from tkinter.simpledialog import askstring
@@ -15,7 +15,9 @@ from tkinter.filedialog import askopenfilename
 # Application imports
 from alfred.io.question import create_from_file
 from alfred.net.driver.myleo import MyLeoDriver
-from alfred.action.upload import ActionUploadQuestion
+from alfred.net.driver.mysa import MySADriver
+from alfred.action.upload_myleo import ActionUpload_MCQ2MyLEO
+from alfred.action.upload_mysa import ActionUpload_MCQ2MySA
 
 logger = logging.getLogger(__name__)
 
@@ -32,21 +34,21 @@ class QueueHandler(logging.Handler):
 
 
 class App(tk.Tk):
-    """ The main application """
+    """The main application"""
 
     def __init__(self):
-        """ Constructor """
+        """Constructor"""
 
         super().__init__()
 
         self.question = None
 
-        self.title('ALFRED v0.1')
+        self.title("ALFRED v0.1")
 
         # Adds in the log queue
         self.log_queue = queue.Queue()
         self.queue_handler = QueueHandler(self.log_queue)
-        formatter = logging.Formatter('%(levelname)s:%(asctime)s: %(message)s')
+        formatter = logging.Formatter("%(levelname)s:%(asctime)s: %(message)s")
         self.queue_handler.setFormatter(formatter)
         logging.root.addHandler(self.queue_handler)
         logging.root.setLevel(logging.INFO)
@@ -56,25 +58,31 @@ class App(tk.Tk):
         self.columnconfigure(1, minsize=800, weight=1)
 
         # Declares the components
-        self.scrolled_text = ScrolledText(self, state='disabled', height=12)
+        self.scrolled_text = ScrolledText(self, state="disabled", height=12)
         self.scrolled_text.grid(row=0, column=0, sticky=tk.NSEW)
-        self.scrolled_text.configure(font='TkFixedFont')
-        self.scrolled_text.tag_config('INFO', foreground='black')
-        self.scrolled_text.tag_config('DEBUG', foreground='gray')
-        self.scrolled_text.tag_config('WARNING', foreground='orange')
-        self.scrolled_text.tag_config('ERROR', foreground='red')
-        self.scrolled_text.tag_config('CRITICAL', foreground='red', underline=1)
+        self.scrolled_text.configure(font="TkFixedFont")
+        self.scrolled_text.tag_config("INFO", foreground="black")
+        self.scrolled_text.tag_config("DEBUG", foreground="gray")
+        self.scrolled_text.tag_config("WARNING", foreground="orange")
+        self.scrolled_text.tag_config("ERROR", foreground="red")
+        self.scrolled_text.tag_config("CRITICAL", foreground="red", underline=1)
 
         frm_buttons = tk.Frame(self, relief=tk.RAISED, bd=2)
-        btn_open_file = tk.Button(frm_buttons, text="Open MCQ Question", command=self.open_file)
-        btn_upload_myleo = tk.Button(frm_buttons, text="Upload to MyLEO", command=self.upload_myleo)
-        btn_upload_sa20 = tk.Button(frm_buttons, text="Upload to SA2.0")
+        btn_open_file = tk.Button(
+            frm_buttons, text="Open MCQ Question", command=self.open_file
+        )
+        btn_upload_myleo = tk.Button(
+            frm_buttons, text="Upload to MyLEO", command=self.upload_myleo
+        )
+        btn_upload_mysa = tk.Button(
+            frm_buttons, text="Upload to SA2.0", command=self.upload_mysa
+        )
         btn_exit = tk.Button(frm_buttons, text="Exit", command=self.destroy)
 
         # Placing the components
         btn_open_file.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
         btn_upload_myleo.grid(row=1, column=0, sticky="ew", padx=5, pady=5)
-        btn_upload_sa20.grid(row=2, column=0, sticky="ew", padx=5, pady=5)
+        btn_upload_mysa.grid(row=2, column=0, sticky="ew", padx=5, pady=5)
         btn_exit.grid(row=3, column=0, sticky="ew", padx=5, pady=5)
 
         frm_buttons.grid(row=0, column=0, sticky="ns")
@@ -83,14 +91,14 @@ class App(tk.Tk):
         # Start polling messages from the queue
         self.after(100, self.poll_log_queue)
 
-        logger.info(f'\n{create_start_image()}')
+        logger.info(f"\n{create_start_image()}")
 
     def display(self, record):
-        """ Displays the record """
+        """Displays the record"""
         msg = self.queue_handler.format(record)
-        self.scrolled_text.configure(state='normal')
-        self.scrolled_text.insert(tk.END, msg + '\n', record.levelname)
-        self.scrolled_text.configure(state='disabled')
+        self.scrolled_text.configure(state="normal")
+        self.scrolled_text.insert(tk.END, msg + "\n", record.levelname)
+        self.scrolled_text.configure(state="disabled")
         # Autoscroll to the bottom
         self.scrolled_text.yview(tk.END)
 
@@ -106,58 +114,86 @@ class App(tk.Tk):
         self.after(100, self.poll_log_queue)
 
     def open_file(self):
-        """ Command to open the file """
+        """Command to open the file"""
 
         filename = askopenfilename()
         bank = create_from_file(filename)
-        logger.info('Loaded file %s', filename)
-        logger.info('Questions:\n%s', pformat(asdict(bank)))
+        logger.info("Loaded file %s", filename)
+        logger.info("Questions:\n%s", pformat(asdict(bank)))
 
         self.question = bank
 
     # end open_file()
 
     def upload_myleo(self):
-        """ Command to upload to MyLeo """
+        """Command to upload to MyLeo"""
 
         if not self.question:
-            logger.warning('You have not yet open a question file yet')
+            logger.warning("You have not yet open a question file yet")
             return
 
         # Displays the username and password dialog in succession
-        username = askstring('Username', 'Enter username (without @rp.edu.sg')
+        username = askstring("Username", "Enter username (without @rp.edu.sg)")
         if not username:
             return
-        if not username.endswith('@rp.edu.sg'):
-            username = f'{username}@rp.edu.sg'
-        logger.info('Username is %s', username)
-        password = askstring('Password', 'Enter Password', show='*')
+        if not username.endswith("@rp.edu.sg"):
+            username = f"{username}@rp.edu.sg"
+        logger.info("Username is %s", username)
+        password = askstring("Password", "Enter Password", show="*")
         if not password:
             return
-    
-        logger.info('Creating driver for MyLEO')
+
+        logger.info("Creating driver for MyLEO")
         driver = MyLeoDriver()
-        driver.connect(
-            username=username,
-            password=password
-        )
+        driver.connect(username=username, password=password)
 
         # Creates the action and tries to upload the question
-        logger.info('Uploading quesion')
-        action = ActionUploadQuestion()
+        logger.info("Uploading quesion")
+        action = ActionUpload_MCQ2MyLEO()
         action.run(driver=driver, bank=self.question)
 
-        logger.info('Done')
+        logger.info("Done")
+
+    # end upload_myleo()
+
+    def upload_mysa(self):
+        """Command to upload to MySA 2.0"""
+
+        if not self.question:
+            logger.warning("You have not yet open a question file yet")
+            return
+
+        # Displays the username and password dialog in succession
+        username = askstring("Username", "Enter username")
+        if not username:
+            return
+        logger.info("Username is %s", username)
+        password = askstring("Password", "Enter Password", show="*")
+        if not password:
+            return
+
+        logger.info("Creating driver for MySA")
+        driver = MySADriver()
+        driver.connect(username=username, password=password)
+
+        # Creates the action and tries to upload the question
+        logger.info("Uploading quesion")
+        action = ActionUpload_MCQ2MySA()
+        action.run(driver=driver, bank=self.question)
+
+        logger.info("Done")
+
+    # end upload_myleo()
 
 
 def create_start_image():
-    """ Function to generate the initial image """
-    pattern = '''
-    ___    __    ____  __________ 
-   /   |  / /   / __ \/ ____/ __ \\
-  / /| | / /   / /_/ / __/ / / / /
- / ___ |/ /___/ _, _/ /___/ /_/ / 
-/_/  |_/_____/_/ |_/_____/_____/  v0.1
+    """Function to generate the initial image"""
+    pattern = """
+    ___    __    __________  __________ 
+   /   |  / /   / ____/ __ \/ ____/ __ \\
+  / /| | / /   / /_  / /_/ / __/ / / / /
+ / ___ |/ /___/ __/ / _, _/ /___/ /_/ / 
+/_/  |_/_____/_/   /_/ |_/_____/_____/  v0.1                                        
 Automation for Learning FRamework for EDucation
-    '''
+    """
     return pattern
