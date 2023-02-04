@@ -1,0 +1,26 @@
+{
+    "type": 0,
+    "title": "test",
+    "comment": "",
+    "topicList": null,
+    "topics": [],
+    "learningOutcomes": "",
+    "estimatedTime": 1,
+    "proficiencyLevel": "Competent",
+    "hasDependency": false,
+    "dependencies": [],
+    "useTos": false,
+    "score": 1,
+    "materials": [],
+    "displayObj": null,
+    "assessmentId": "19fd8729-8da5-4deb-81b1-5deeb018b0ec",
+    "moduleCode": "A3079C",
+    "tosItemId": null,
+    "bankType": 0,
+    "questionGroups": [],
+    "content": "{\"difficultyScores\":[{\"displayName\":\"Competent\",\"score\":1}],\"question\":\"<span data-default-style=\\\"{&quot;fontFamily&quot;:&quot;Arial&quot;,&quot;fontSize&quot;:&quot;12pt&quot;}\\\" style=\\\"font-family: Arial; font-size: 12pt;\\\">test</span>\",\"options\":[{\"id\":\"choice_0\",\"content\":\"<span data-default-style=\\\"{&quot;fontFamily&quot;:&quot;Arial&quot;,&quot;fontSize&quot;:&quot;12pt&quot;}\\\" style=\\\"font-family: Arial; font-size: 12pt;\\\">a</span>\"},{\"id\":\"choice_1\",\"content\":\"<span data-default-style=\\\"{&quot;fontFamily&quot;:&quot;Arial&quot;,&quot;fontSize&quot;:&quot;12pt&quot;}\\\" style=\\\"font-family: Arial; font-size: 12pt;\\\">b</span>\"},{\"id\":\"choice_2\",\"content\":\"<span data-default-style=\\\"{&quot;fontFamily&quot;:&quot;Arial&quot;,&quot;fontSize&quot;:&quot;12pt&quot;}\\\" style=\\\"font-family: Arial; font-size: 12pt;\\\">c</span>\"},{\"id\":\"choice_3\",\"content\":\"<span data-default-style=\\\"{&quot;fontFamily&quot;:&quot;Arial&quot;,&quot;fontSize&quot;:&quot;12pt&quot;}\\\" style=\\\"font-family: Arial; font-size: 12pt;\\\">d</span>\"}],\"displayStructure\":1,\"allowRandom\":true}",
+    "markingScheme": "{\"scoreType\":0,\"correctAnswers\":[{\"id\":\"choice_0\"}],\"markingSchemeText\":\"\"}",
+    "status": 1
+}
+
+https://mysa.rp.edu.sg/authoring/api/questions

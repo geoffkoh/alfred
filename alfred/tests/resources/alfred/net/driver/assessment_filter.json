@@ -1,0 +1,1395 @@
+{
+    "qtList": [
+        {
+            "academicYear": 2022,
+            "category": "CET",
+            "number": 4,
+            "displayName": "CET (AY2022 Term 4)"
+        },
+        {
+            "academicYear": 2022,
+            "category": "CET",
+            "number": 2,
+            "displayName": "CET (AY2022 Term 2)"
+        },
+        {
+            "academicYear": 2022,
+            "category": "PFP",
+            "number": 2,
+            "displayName": "PFP (AY2022 Semester 2)"
+        },
+        {
+            "academicYear": 2022,
+            "category": "PFP",
+            "number": 1,
+            "displayName": "PFP (AY2022 Semester 1)"
+        },
+        {
+            "academicYear": 2021,
+            "category": "PFP",
+            "number": 2,
+            "displayName": "PFP (AY2021 Semester 2)"
+        },
+        {
+            "academicYear": 2021,
+            "category": "PFP",
+            "number": 1,
+            "displayName": "PFP (AY2021 Semester 1)"
+        },
+        {
+            "academicYear": 2020,
+            "category": "PFP",
+            "number": 2,
+            "displayName": "PFP (AY2020 Semester 2)"
+        }
+    ],
+    "moduleCodeList": [
+        "A0001F",
+        "A1119C",
+        "A1129C",
+        "A1139C",
+        "A1149C",
+        "A1159C",
+        "A1169C",
+        "A1189C",
+        "A2009C",
+        "A2019C",
+        "A2069C",
+        "A2129C",
+        "A3059C",
+        "A3079C"
+    ],
+    "cohortList": [
+        "Main"
+    ],
+    "assessmentList": [
+        "CW1",
+        "CWF",
+        "CA1",
+        "CA2",
+        "CA3",
+        "Supplementary Exam"
+    ],
+    "totalCount": 35,
+    "data": [
+        {
+            "qTypeFullName": "A1119C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "ea159962-b7da-4719-bb61-e589b04d9f74",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A1119C",
+                    "moduleId": "1d3dbffd-3eda-4f8b-8273-3a5606f84bb1",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "dca482c6-dfdc-42fe-ae3d-b062fc0d87fa",
+                            "name": "A1119C CWF Submission",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A1129C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "ce5b4d05-9141-4a4d-97dc-3403fa39a269",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A1129C",
+                    "moduleId": "e07fcfe3-ed6a-45ed-9fe9-87f808691873",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "cc4de27d-9fac-4596-840b-d93e9566f631",
+                            "name": "A1129C Graded Assignment",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A1139C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "721584e9-8b92-47b1-85a3-04cf14b28942",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A1139C",
+                    "moduleId": "c2068fc3-4d8c-4edf-acb6-95fa51f7bc7b",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "433820d9-3796-4c56-b7f5-194e96985edb",
+                            "name": "A1139C CWF File submission ",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A1149C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "8458b5b1-f927-4a5d-b4a8-83dc4362bc61",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A1149C",
+                    "moduleId": "98e34aef-158e-4632-92b4-705774325f27",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "ce709797-294d-485b-935e-543d27cccc40",
+                            "name": "Graded Assignment",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A2009C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "c1613143-12cb-4446-983d-2d9aef45e59d",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A2009C",
+                    "moduleId": "cee352c8-d74d-424b-bee6-3fb89190ab08",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "c4ff8c26-3a20-476c-bb10-6886d5a3e1b9",
+                            "name": "A2009C CWF Submission",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A2019C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "9ab2683c-784b-46c0-a975-93afcd441551",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A2019C",
+                    "moduleId": "218d8998-00f1-471b-9db8-dfde21b3cc22",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "e4dcb8da-0003-4322-8978-94ffdd2a8193",
+                            "name": "A2019C Graded Assignment",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A2129C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "71f0a8fb-9164-44b8-a1dc-b8642143d9b4",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A2129C",
+                    "moduleId": "b56587ce-9759-4490-ae3a-e97d8758313a",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "20159cc5-7994-45cf-8cc2-fa765e1a00d1",
+                            "name": "A2129C CWF File Submission",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A3079C - Main<br />CET (AY2022 Term 4)",
+            "assessments": [
+                {
+                    "id": "19fd8729-8da5-4deb-81b1-5deeb018b0ec",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CW1",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A3079C",
+                    "moduleId": "e6ce681e-9dae-40a9-9ba6-5be34713962f",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "ffd789cf-b2a1-4560-ae16-9303cef53ff2",
+                            "name": "A3079C CW1 (Team PPT)",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_instructions_view",
+                        "authoring_instructions_edit",
+                        "authoring_tos_view",
+                        "authoring_tos_edit",
+                        "authoring_tos_editguideline",
+                        "authoring_tos_generatepaper",
+                        "authoring_tos_generatequestion",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentquestion_edit",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assessmentpaper_edit",
+                        "authoring_assessmentpaper_gopaperrepository",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_assignstudent_view",
+                        "authoring_assignstudent_edit",
+                        "authoring_assignrole_view",
+                        "authoring_assignrole_assignmarkerandchecker",
+                        "authoring_assignrole_assignpapercrafter",
+                        "authoring_assignrole_assignquestioncrafter",
+                        "authoring_questionbank_view",
+                        "authoring_questionbank_edit",
+                        "authoring_managedependency_view",
+                        "authoring_managedependency_edit",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_edit",
+                        "authoring_commonsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_edit",
+                        "printing_home_navigator_view",
+                        "printing_sendforprinting_view",
+                        "printing_sendforprinting_edit",
+                        "printing_submiteditrequirementrequest_view",
+                        "printing_submiteditrequirementrequest_edit",
+                        "printing_assigndelegatedstaff_view",
+                        "printing_assigndelegatedstaff_edit",
+                        "printing_configurecalculationofrovingenvelope_view",
+                        "printing_selecttimeslots_view",
+                        "printing_selecttimeslots_edit",
+                        "printing_assigndelegatedstafffortimeslots_view",
+                        "printing_assigndelegatedstafffortimeslots_edit",
+                        "printing_print1stcopy_view",
+                        "printing_assigndelegatedstaffforcollection_view",
+                        "printing_assigndelegatedstaffforcollection_edit",
+                        "printing_requestofchangingcollectiontime_view",
+                        "printing_requestofchangingcollectiontime_edit",
+                        "printing_archivalofusedassessmentdocuments_view",
+                        "printing_acknowledgementforhandingoverusedscripts_view",
+                        "printing_sendforprintingrovingenvelope_view",
+                        "printing_sendforprintingrovingenvelope_edit",
+                        "printing_archivalofusedassessmentdocuments_edit",
+                        "printing_acknowledgementforhandingoverusedscripts_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "93a8a05d-5079-4127-977b-bfacb8d91d4b",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A3079C",
+                    "moduleId": "e6ce681e-9dae-40a9-9ba6-5be34713962f",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "e28968ad-ca19-40c4-a47e-b986f53e1e4c",
+                            "name": "A3079C CWF (Individual Report)",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_instructions_view",
+                        "authoring_instructions_edit",
+                        "authoring_tos_view",
+                        "authoring_tos_edit",
+                        "authoring_tos_editguideline",
+                        "authoring_tos_generatepaper",
+                        "authoring_tos_generatequestion",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentquestion_edit",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assessmentpaper_edit",
+                        "authoring_assessmentpaper_gopaperrepository",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_assignstudent_view",
+                        "authoring_assignstudent_edit",
+                        "authoring_assignrole_view",
+                        "authoring_assignrole_assignmarkerandchecker",
+                        "authoring_assignrole_assignpapercrafter",
+                        "authoring_assignrole_assignquestioncrafter",
+                        "authoring_questionbank_view",
+                        "authoring_questionbank_edit",
+                        "authoring_managedependency_view",
+                        "authoring_managedependency_edit",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_edit",
+                        "authoring_commonsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_edit",
+                        "printing_home_navigator_view",
+                        "printing_sendforprinting_view",
+                        "printing_sendforprinting_edit",
+                        "printing_submiteditrequirementrequest_view",
+                        "printing_submiteditrequirementrequest_edit",
+                        "printing_assigndelegatedstaff_view",
+                        "printing_assigndelegatedstaff_edit",
+                        "printing_configurecalculationofrovingenvelope_view",
+                        "printing_selecttimeslots_view",
+                        "printing_selecttimeslots_edit",
+                        "printing_assigndelegatedstafffortimeslots_view",
+                        "printing_assigndelegatedstafffortimeslots_edit",
+                        "printing_print1stcopy_view",
+                        "printing_assigndelegatedstaffforcollection_view",
+                        "printing_assigndelegatedstaffforcollection_edit",
+                        "printing_requestofchangingcollectiontime_view",
+                        "printing_requestofchangingcollectiontime_edit",
+                        "printing_archivalofusedassessmentdocuments_view",
+                        "printing_acknowledgementforhandingoverusedscripts_view",
+                        "printing_sendforprintingrovingenvelope_view",
+                        "printing_sendforprintingrovingenvelope_edit",
+                        "printing_archivalofusedassessmentdocuments_edit",
+                        "printing_acknowledgementforhandingoverusedscripts_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A1159C - Main<br />CET (AY2022 Term 2)",
+            "assessments": [
+                {
+                    "id": "3447c693-8dee-4f9b-987c-f08111632715",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": true,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A1159C",
+                    "moduleId": "1c9fcaab-2b16-43c5-87c3-7449b852bb71",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "329b6626-6048-4a54-89f2-ded9dac66dd5",
+                            "name": "Individual Report",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A1169C - Main<br />CET (AY2022 Term 2)",
+            "assessments": [
+                {
+                    "id": "8db4676a-07e3-4598-8711-d5ea7ddbf199",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": true,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A1169C",
+                    "moduleId": "8bf68ddf-01f5-4ce1-a150-82d170c87c2c",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "904f2a3a-eb60-4a1d-809c-4ef6a1d66b72",
+                            "name": "AY2022 Term 2 A1169C GA",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A1189C - Main<br />CET (AY2022 Term 2)",
+            "assessments": [
+                {
+                    "id": "a0e4371b-6d3e-4b16-b5ad-6b6d56ab5810",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": true,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A1189C",
+                    "moduleId": "a9c541c1-880c-4d9f-aff1-96bedb13d429",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "264b0745-be1c-4baf-aec0-ac3bc060c781",
+                            "name": "Graded Assignment",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A2069C - Main<br />CET (AY2022 Term 2)",
+            "assessments": [
+                {
+                    "id": "9c4a65e5-9186-461b-9bb2-0fd72cdaae63",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": true,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A2069C",
+                    "moduleId": "08884503-ecd1-4d27-bbf2-46217c46bafe",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "08358191-93f5-496a-b02c-ca99c1d94af3",
+                            "name": "Report",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A3059C - Main<br />CET (AY2022 Term 2)",
+            "assessments": [
+                {
+                    "id": "d6d657c0-a05b-46b2-b737-b8f1139c2f70",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CWF",
+                    "assessmentMode": 5,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": true,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A3059C",
+                    "moduleId": "52dbc2e4-6d51-45a1-a8db-2e938c29c775",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [
+                        {
+                            "id": "9da92973-20cf-4fd1-bff4-2e171833ada1",
+                            "name": "Graded Assignment Submission",
+                            "status": 5
+                        }
+                    ],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A0001F - Main<br />PFP (AY2022 Semester 2)",
+            "assessments": [
+                {
+                    "id": "d40d0047-8278-4693-b505-8cf1a0d43624",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "4194aa4a-6aa2-405e-995f-08d9e12c2cf6",
+                    "paperList": [
+                        {
+                            "id": "c0001688-f6d7-433f-8fff-85b4f7207c1b",
+                            "name": "Assessment Paper AY 2022 Semester 2 A0001F CA1 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "20825012-3ccd-4616-b051-6f990d2d6078",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "4194aa4a-6aa2-405e-995f-08d9e12c2cf6",
+                    "paperList": [
+                        {
+                            "id": "7f9f1890-8d62-43c2-af37-368a877a66ea",
+                            "name": "Assessment Paper AY 2022 Semester 2 A0001F CA1 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "4e0badaa-b200-439f-800c-7efa16741b5a",
+                    "isMock": false,
+                    "isStart": false,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": true,
+                    "moduleCode": "A0001F",
+                    "moduleId": "4194aa4a-6aa2-405e-995f-08d9e12c2cf6",
+                    "paperList": [
+                        {
+                            "id": "0fd69613-f975-44bb-95a0-9172215cdede",
+                            "name": "Assessment Paper AY 2022 Semester 2 A0001F CA3 Main",
+                            "status": 1
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_hardcopy_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": false
+                },
+                {
+                    "id": "fc48de94-c2a1-4438-99de-80830c5ef217",
+                    "isMock": false,
+                    "isStart": false,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "4194aa4a-6aa2-405e-995f-08d9e12c2cf6",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_hardcopy_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": false
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A0001F - Main<br />PFP (AY2022 Semester 1)",
+            "assessments": [
+                {
+                    "id": "5f147578-72c4-4f07-a756-21f8842b4820",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "a37911fd-0614-4a9e-8314-08d9e1660212",
+                    "paperList": [
+                        {
+                            "id": "a66af4e6-0f9e-40cd-8908-d3f257232390",
+                            "name": "Assessment Paper AY 2022 Semester 1 A0001F CA1 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "698c1f92-a129-4366-be6c-be2a5dcc686b",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "a37911fd-0614-4a9e-8314-08d9e1660212",
+                    "paperList": [
+                        {
+                            "id": "74881290-81ef-45bb-889e-6255ea885cf1",
+                            "name": "Assessment Paper AY 2022 Semester 1 A0001F CA1 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "37e4ebe3-007b-424b-9f2d-b9f5aa515815",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "a37911fd-0614-4a9e-8314-08d9e1660212",
+                    "paperList": [
+                        {
+                            "id": "524afb78-b02a-4b5e-8ea7-d1b863b53eb3",
+                            "name": "Assessment Paper AY 2022 Semester 1 A0001F CA3 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "8eafcfe3-bf29-4100-b09d-7556aaa4be22",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "a37911fd-0614-4a9e-8314-08d9e1660212",
+                    "paperList": [
+                        {
+                            "id": "67e5c82c-f00a-4131-a921-ead0302b6f5f",
+                            "name": "Assessment Paper AY 2022 Semester 1 A0001F CA3 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A0001F - Main<br />PFP (AY2021 Semester 2)",
+            "assessments": [
+                {
+                    "id": "ee9b844d-8ebc-4c00-ab6c-ad731b720f82",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "5d2fac4d-2a4b-4ec2-6130-08d989392d29",
+                    "paperList": [
+                        {
+                            "id": "e2ac4a09-d4e1-4ef9-a250-8afe132008bb",
+                            "name": "Assessment Paper AY 2021 Semester 2 A0001F CA1 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "9b6366fa-ea23-4b01-891b-932fc8a9226a",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "5d2fac4d-2a4b-4ec2-6130-08d989392d29",
+                    "paperList": [
+                        {
+                            "id": "af450f16-4f27-41f0-9cda-b9d9e990020b",
+                            "name": "Assessment Paper AY 2021 Semester 2 A0001F CA1 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "a9715ff9-df32-4a04-b031-df27ad07a2dc",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "5d2fac4d-2a4b-4ec2-6130-08d989392d29",
+                    "paperList": [
+                        {
+                            "id": "ebd578d8-0507-438a-b156-ade523056933",
+                            "name": "Assessment Paper AY 2021 Semester 2 A0001F CA3 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "b83ee2f4-56e7-43ec-80c2-d82b389153d8",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "5d2fac4d-2a4b-4ec2-6130-08d989392d29",
+                    "paperList": [
+                        {
+                            "id": "712faa6e-a661-4ea0-b763-5a43e13aeb4f",
+                            "name": "Assessment Paper AY 2021 Semester 2 A0001F CA3 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A0001F - Main<br />PFP (AY2021 Semester 1)",
+            "assessments": [
+                {
+                    "id": "380e50a0-eaac-4b99-9ae4-2b01a6095043",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "233f1b7f-965f-4df7-a810-08d8fb311d52",
+                    "paperList": [
+                        {
+                            "id": "67389c2c-1e4e-4f6a-b8e3-9ceeeb4be6ad",
+                            "name": "Assessment Paper AY 2021 Semester 1 A0001F CA1 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "b4a602fe-1f38-44f2-9cc2-211705b502ef",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA1",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "233f1b7f-965f-4df7-a810-08d8fb311d52",
+                    "paperList": [
+                        {
+                            "id": "4f96d609-f06c-430a-906c-27873318e551",
+                            "name": "Assessment Paper AY 2021 Semester 1 A0001F CA1 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "21b8689a-8ea5-488e-a919-967f95470434",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "233f1b7f-965f-4df7-a810-08d8fb311d52",
+                    "paperList": [
+                        {
+                            "id": "3bc3202b-363d-462c-8451-f822dfc9563f",
+                            "name": "Assessment Paper AY 2021 Semester 1 A0001F CA3 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "14ea2151-730f-48bc-ac72-88fc0f377c34",
+                    "isMock": false,
+                    "isStart": false,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "233f1b7f-965f-4df7-a810-08d8fb311d52",
+                    "paperList": [],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_instructions_view",
+                        "authoring_tos_view",
+                        "authoring_assessmentquestion_view",
+                        "authoring_assessmentpaper_view",
+                        "authoring_hardcopy_view",
+                        "authoring_assignstudent_view",
+                        "authoring_assignrole_view",
+                        "authoring_onlineassessmentsetting_assessmentlevel_view",
+                        "authoring_commonsetting_assessmentlevel_view"
+                    ],
+                    "isApproved": false
+                }
+            ]
+        },
+        {
+            "qTypeFullName": "A0001F - Main<br />PFP (AY2020 Semester 2)",
+            "assessments": [
+                {
+                    "id": "6549147f-f93b-444e-a7a2-257a8c8a1772",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA2",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "19e66bde-2c5c-4863-84e6-4e1e2bd06d6d",
+                    "paperList": [
+                        {
+                            "id": "722ec8dd-547c-4521-a827-c09238e84444",
+                            "name": "Assessment Paper AY 2020 Semester 2 A0001F CA2 Main 1",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "4ac2d78b-1f2c-4706-adc1-32117123c412",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA2",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "19e66bde-2c5c-4863-84e6-4e1e2bd06d6d",
+                    "paperList": [
+                        {
+                            "id": "20ba4277-e8c0-460e-a81b-7192eab17598",
+                            "name": "Assessment Paper AY 2020 Semester 2 A0001F CA2 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "36e12192-963f-4266-903b-710f0b424306",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "19e66bde-2c5c-4863-84e6-4e1e2bd06d6d",
+                    "paperList": [
+                        {
+                            "id": "a46d201b-229a-447c-8aaa-d7607fcb39b2",
+                            "name": "Assessment Paper AY 2020 Semester 2 A0001F CA3 Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "80140c18-64cf-4ef9-87e1-73623190cce1",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "CA3",
+                    "assessmentMode": 1,
+                    "makeup": true,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "19e66bde-2c5c-4863-84e6-4e1e2bd06d6d",
+                    "paperList": [
+                        {
+                            "id": "38af843f-a5d3-494f-be44-4686431ff8ad",
+                            "name": "Assessment Paper AY 2020 Semester 2 A0001F CA3 (Make-up) Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                },
+                {
+                    "id": "1a4d3e5f-a98d-43ff-8031-a900993041d6",
+                    "isMock": false,
+                    "isStart": true,
+                    "assessment": "Supplementary Exam",
+                    "assessmentMode": 1,
+                    "makeup": false,
+                    "abandoned": false,
+                    "freezed": false,
+                    "expired": false,
+                    "canSubmit": false,
+                    "moduleCode": "A0001F",
+                    "moduleId": "19e66bde-2c5c-4863-84e6-4e1e2bd06d6d",
+                    "paperList": [
+                        {
+                            "id": "76eaca67-5d95-47b0-b328-0532cf9a01a6",
+                            "name": "Assessment Paper AY 2020 Semester 2 A0001F Supplementary Exam Main",
+                            "status": 5
+                        }
+                    ],
+                    "rubricsList": [],
+                    "deliverableList": [],
+                    "permissions": [
+                        "authoring_home_navigator_view",
+                        "authoring_assessmentdetails_view",
+                        "authoring_hardcopy_view",
+                        "authoring_hardcopy_edit"
+                    ],
+                    "isApproved": true
+                }
+            ]
+        }
+    ]
+}
