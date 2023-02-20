@@ -24,6 +24,7 @@ class MyLeoDriver(DriverBase):
     def __init__(self):
         """Constructor"""
         self.url = "https://myleo.rp.edu.sg"
+        self.home_url = "https://myleo.rp.edu.sg/CoreBase/Home/Index"
         self.driver = get_web_driver()
         self.session = None
 
@@ -77,12 +78,13 @@ class MyLeoDriver(DriverBase):
         into MyLEO.
         """
 
-        self.driver.get(self.url)
+        self.driver.get(self.home_url)
         # Finds user related elements. Non logged in page should not
         # have this
         try:
             self.driver.find_element_by_id("nav-user-dropdown")
             logger.info("Is logged in")
+            self._setup_cookies()
         except NoSuchElementException as exc:
             logger.info("Not logged in")
             return False

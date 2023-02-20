@@ -21,10 +21,12 @@ class TestMySADriver:
     def test_connect(self):
 
         driver = MySADriver()
-        driver.connect(
+        result = driver.connect(
             username=os.getenv("ALFRED_USERNAME"),  # To replace with username
             password=os.getenv("ALFRED_PASS"),  # To replace with password
         )
+
+        assert result, "Should be logged in successfully"
 
     # end test_connect()
 

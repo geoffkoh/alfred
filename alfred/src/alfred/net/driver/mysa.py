@@ -12,7 +12,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import (
+    ElementClickInterceptedException,
+    NoSuchElementException,
+    TimeoutException
+)
 
 # Application imports
 from alfred.net.driver.base import get_web_driver, DriverBase
@@ -93,22 +97,24 @@ class MySADriver(DriverBase):
             username_elt.send_keys(username)
             password_elt.send_keys(password)
             button = self.driver.find_element_by_id("submitForm")
-            button.click()
+            try:
+                button.click()
+            except ElementClickInterceptedException as exc:
+                self.driver.execute_script("arguments[0].click();", button)
 
             # Wait until the main page of SA2.0 is present, in which
             # there will be a div with id favoriteLinksContainerId
-            WebDriverWait(driver=self.driver, timeout=60).until(
-                EC.presence_of_element_located((By.ID, "favoriteLinksContainerId"))
-            )
-
             try:
+                WebDriverWait(driver=self.driver, timeout=10).until(
+                    EC.presence_of_element_located((By.ID, "favoriteLinksContainerId"))
+                )
                 self.driver.find_element_by_id("userinfo")
                 logger.info("Login successful")
                 self._setup_cookies()
                 self._setup_auth_token()  # We need this to set Auth token
                 return True
-            except NoSuchElementException:
-                logger.warning("Cannot log in. Incorrect username or password?")
+            except (NoSuchElementException, TimeoutException):
+                logger.error("Cannot log in. Incorrect username or password?")
                 return False
 
         return True

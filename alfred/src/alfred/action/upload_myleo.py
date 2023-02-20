@@ -76,9 +76,11 @@ class ActionUpload_MCQ2MyLEO:
         """Runs this particular action"""
 
         logger.info("Creating questions")
+        counter = 0
         for question in bank.questions:
-            self.create_question(driver=driver, question=question)
-        logger.info("Questions created")
+            if self.create_question(driver=driver, question=question):
+                counter += 1
+        logger.info("%s/%s Questions created", counter, len(bank.questions))
         driver.navigate(self.url)
 
     # end run()
@@ -116,6 +118,14 @@ class ActionUpload_MCQ2MyLEO:
         response = driver.session.post(self.create_api, data=asdict(payload))
         logger.info("Response %s", response)
         logger.info(response.content)
+
+        # If response is not 200, we print out an error message
+        if response.status_code != 200:
+            logger.error('Error uploading question %s', question.title)
+            logger.error(response.content)
+            return False
+        
+        return True
 
     # end create_question()
 
