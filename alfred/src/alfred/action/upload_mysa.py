@@ -4,6 +4,7 @@
 from dataclasses import asdict, dataclass, field
 import json
 import logging
+import traceback
 from typing import Dict, List
 
 # Application import
@@ -112,9 +113,15 @@ class ActionUpload_MCQ2MySA:
         logger.info("Received assessment filter %s", self.assessment_filter)
 
         logger.info("Creating questions")
+        counter = 0
         for question in bank.questions:
-            self.create_question(driver=driver, question=question)
-        logger.info("Questions created")
+            try:
+                if self.create_question(driver=driver, question=question):
+                    counter += 1
+            except ValueError as exc:
+                logger.error(traceback.format_exc())
+                logger.error(exc)
+        logger.info("%s/%s Questions created", counter, len(bank.questions))
 
         driver.navigate(self.url)
         return True
@@ -123,7 +130,7 @@ class ActionUpload_MCQ2MySA:
 
     def create_question(
         self, driver: DriverBase, question: MultipleChoiceQuestion
-    ) -> None:
+    ) -> bool:
         """Creates a multiple choice question
 
         Args:
@@ -137,6 +144,7 @@ class ActionUpload_MCQ2MySA:
         payload = Payload()
         payload.title = question.title
         payload.score = int(question.score)
+        payload.estimatedTime = int(question.est_time_min)
 
         # Adds in assessment and module code
         mod_assess_pair = self.assessment.module_assessment_pairmap.get(
@@ -188,6 +196,14 @@ class ActionUpload_MCQ2MySA:
         response = driver.session.post(self.create_api, json=asdict(payload))
         logger.info("Response %s", response)
         logger.info(response.content)
+
+        # If response is not 200, we print out an error message
+        if response.status_code != 201:
+            logger.error('Error uploading question %s', question.title)
+            logger.error(response.content)
+            return False
+
+        return True
 
     # end create_question()
 

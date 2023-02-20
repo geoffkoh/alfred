@@ -72,7 +72,7 @@ class App(tk.Tk):
             frm_buttons, text="Open MCQ Question", command=self.open_file
         )
         btn_upload_myleo = tk.Button(
-            frm_buttons, text="Upload to MyLEO", command=self.upload_myleo
+            frm_buttons, text="Upload to LEO2.0", command=self.upload_myleo
         )
         btn_upload_mysa = tk.Button(
             frm_buttons, text="Upload to SA2.0", command=self.upload_mysa
@@ -129,30 +129,38 @@ class App(tk.Tk):
         """Command to upload to MyLeo"""
 
         if not self.question:
-            logger.warning("You have not yet open a question file yet")
+            logger.error("You have not yet open a question file")
             return
 
         # Displays the username and password dialog in succession
-        username = askstring("Username", "Enter username (without @rp.edu.sg)")
-        if not username:
-            return
-        if not username.endswith("@rp.edu.sg"):
-            username = f"{username}@rp.edu.sg"
-        logger.info("Username is %s", username)
-        password = askstring("Password", "Enter Password", show="*")
-        if not password:
-            return
-
-        logger.info("Creating driver for MyLEO")
         driver = MyLeoDriver()
-        driver.connect(username=username, password=password)
 
-        # Creates the action and tries to upload the question
-        logger.info("Uploading quesion")
-        action = ActionUpload_MCQ2MyLEO()
-        action.run(driver=driver, bank=self.question)
+        # Checks to see if I need to connect
+        connected = driver.is_connected()
 
-        logger.info("Done")
+        if not connected:
+            username = askstring("Username", "Enter username (without @rp.edu.sg)")
+            if not username:
+                logger.error('No username given')
+                return
+            if not username.endswith("@rp.edu.sg"):
+                username = f"{username}@rp.edu.sg"
+            logger.info("Username is %s", username)
+            password = askstring("Password", "Enter Password", show="*")
+            if not password:
+                logger.error('No password given')
+                return
+            logger.info("Creating driver for LEO2.0")
+            connected = driver.connect(username=username, password=password)
+            
+        if connected:
+            # Creates the action and tries to upload the question
+            logger.info("Uploading question")
+            action = ActionUpload_MCQ2MyLEO()
+            action.run(driver=driver, bank=self.question)
+            logger.info("Done")
+        else:
+            logger.error("Cannot log in. Perhaps incorrect username and password")
 
     # end upload_myleo()
 
@@ -160,28 +168,31 @@ class App(tk.Tk):
         """Command to upload to MySA 2.0"""
 
         if not self.question:
-            logger.warning("You have not yet open a question file yet")
+            logger.error("You have not yet open a question file")
             return
 
         # Displays the username and password dialog in succession
-        username = askstring("Username", "Enter username")
+        username = askstring("Username", "Enter username (without @rp.edu.sg)")
         if not username:
+            logger.error('No username given')
             return
         logger.info("Username is %s", username)
         password = askstring("Password", "Enter Password", show="*")
         if not password:
+            logger.error('No password given')
             return
 
         logger.info("Creating driver for MySA")
         driver = MySADriver()
-        driver.connect(username=username, password=password)
 
-        # Creates the action and tries to upload the question
-        logger.info("Uploading quesion")
-        action = ActionUpload_MCQ2MySA()
-        action.run(driver=driver, bank=self.question)
-
-        logger.info("Done")
+        if driver.connect(username=username, password=password):
+            # Creates the action and tries to upload the question
+            logger.info("Uploading question")
+            action = ActionUpload_MCQ2MySA()
+            action.run(driver=driver, bank=self.question)
+            logger.info("Done")
+        else:
+            logger.error("Cannot log in. Perhaps incorrect username and password")
 
     # end upload_myleo()
 
