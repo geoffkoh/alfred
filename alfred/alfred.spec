@@ -2,7 +2,7 @@
 
 
 block_cipher = None
-
+import alfred
 
 a = Analysis(
     ['src\\alfred\\cli\\main.py'],
@@ -31,7 +31,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='alfred',
+    name=f'alfred_{alfred.__version__}',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
