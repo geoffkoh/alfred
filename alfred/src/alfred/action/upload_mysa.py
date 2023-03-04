@@ -4,6 +4,7 @@
 from dataclasses import asdict, dataclass, field
 import json
 import logging
+import pprint
 import traceback
 from typing import Dict, List
 
@@ -110,7 +111,8 @@ class ActionUpload_MCQ2MySA:
 
         logger.info("Getting assessment filter")
         self.assessment = parse_assessment_filter(driver.get_assessments_filter())
-        logger.info("Received assessment filter %s", self.assessment_filter)
+        logger.info("Received assessment filter")
+        logger.info("%s", pprint.pformat(self.assessment.module_assessment_pairmap))
 
         logger.info("Creating questions")
         counter = 0
@@ -150,6 +152,13 @@ class ActionUpload_MCQ2MySA:
         mod_assess_pair = self.assessment.module_assessment_pairmap.get(
             (question.module, question.assessment)
         )
+        if not mod_assess_pair:
+            logger.warning(
+                "Module %s Assessment %s not found. Skipping question: %s",
+                question.module, question.assessment, question.title
+            )
+            return False
+
         payload.assessmentId = mod_assess_pair[1]
         payload.moduleCode = question.module
 

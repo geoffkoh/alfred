@@ -142,7 +142,7 @@ class MySADriver(DriverBase):
 
     # end is_connected()
 
-    def get_assessments_filter(self, offset: int = 1, limit: int = 100) -> Dict:
+    def get_assessments_filter(self, offset: int = 1, limit: int = 999999) -> Dict:
         """Gets the assessment filter for RP MySA 2.0
 
         Args:

@@ -45,6 +45,17 @@ class App(tk.Tk):
 
         self.title("ALFRED v0.1")
 
+        # Sets geometry
+        window_width = 800
+        window_height = 600
+        self.minsize(width=window_width, height=400)
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+        center_x = int(screen_width/2 - window_width / 2)
+        center_y = int(screen_height/2 - window_height / 2)
+        # set the position of the window to the center of the screen
+        self.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
+
         # Adds in the log queue
         self.log_queue = queue.Queue()
         self.queue_handler = QueueHandler(self.log_queue)
@@ -54,8 +65,8 @@ class App(tk.Tk):
         logging.root.setLevel(logging.INFO)
 
         # Sets the size of the window
-        self.rowconfigure(0, minsize=800, weight=1)
-        self.columnconfigure(1, minsize=800, weight=1)
+        self.rowconfigure(0, minsize=600, weight=1)
+        self.columnconfigure(1, minsize=400, weight=1)
 
         # Declares the components
         self.scrolled_text = ScrolledText(self, state="disabled", height=12)
