@@ -46,20 +46,21 @@ def parse_assessment_filter(data: Dict) -> AssessmentData:
     """
 
     assessment_data = AssessmentData()
-
     for datum in data.get("data", []):
         for entry in datum.get("assessments"):
             assessment = entry.get("assessment")
             assessment_id = entry.get("id")
             module_code = entry.get("moduleCode")
             module_id = entry.get("moduleId")
-            assessment_data.module_assessment_pairmap[(module_code, assessment)] = (
-                module_id,
-                assessment_id,
-            )
-
+            if "authoring_questionbank_edit" in entry.get("permissions", []):
+                key = (module_code, assessment)
+                if key in assessment_data.module_assessment_pairmap:
+                    logger.warning('%s is already in module_assessment. Skipping', key)
+                assessment_data.module_assessment_pairmap[key] = (
+                    module_id,
+                    assessment_id,
+                )
     return assessment_data
-
 
 # end parse_assessment_filter()
 
