@@ -41,6 +41,7 @@ class MultipleChoiceQuestion(Question, CompetencyMixin):
     options: dict = field(default_factory=dict)
     module: str = None  # The module code, e.g. A3079C
     assessment: str = None  # Assessment e.g. CW1
+    qtype: str = None  # Qualification type, e.g. PFP (AY2022 Semester 2)
 
 
 @dataclass
@@ -79,6 +80,7 @@ def create_from_file(filename: str) -> QuestionBank:
     curr_state = ParseState.NOT_QUESTION
     curr_module = None
     curr_assessment = None
+    curr_qtype = None
     for index, row in data.iterrows():
 
         # Determines the current state.
@@ -115,6 +117,12 @@ def create_from_file(filename: str) -> QuestionBank:
                     curr_assessment = question.assessment
                 else:
                     question.assessment = curr_assessment
+            if "Qualification Type" in data:
+                if row["Qualification Type"] is not np.nan:
+                    question.qtype = row["Qualification Type"]
+                    curr_qtype = question.qtype
+                else:
+                    question.qtype = curr_qtype
         elif curr_state == ParseState.CHOICE:
             question.options[row.Title] = row.Question
         else:

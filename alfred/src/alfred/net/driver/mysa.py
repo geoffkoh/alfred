@@ -4,6 +4,7 @@
 from dataclasses import dataclass, field
 import logging
 import json
+import re
 from typing import Dict, List, Tuple
 
 # Third party imports
@@ -29,10 +30,27 @@ class AssessmentData:
     """Data structure for the minimal information for assessment"""
 
     # Structure that maps module, assessment, i.e. ('A3079C', 'CWF')
-    # into their respective uid
-    module_assessment_pairmap: Dict[Tuple[str, str], Tuple[str, str]] = field(
+    # into a dictionary of respective uid. The key of the dictionary
+    # is the qualification type.
+    module_assessment_map: Dict[Tuple[str, str], Dict[str, Tuple[str, str]]] = field(
         default_factory=dict
     )
+
+
+def parse_qtype_fullname(fullname: str):
+    """ Helper function to extract the qtype from the full name.
+    
+    Args:
+        qtype_fullname (str): qtypeFullname, e.g. 'A1159C - Main<br />CET (AY2023 Term 2)'
+    
+    Returns:
+        The qtype only.
+    """
+
+    tokens = re.split(r'<br\s*/>', fullname)
+    if len(tokens) == 2:
+        return tokens[-1]
+    return None
 
 
 def parse_assessment_filter(data: Dict) -> AssessmentData:
@@ -47,16 +65,18 @@ def parse_assessment_filter(data: Dict) -> AssessmentData:
 
     assessment_data = AssessmentData()
     for datum in data.get("data", []):
-        for entry in datum.get("assessments"):
+        qtype_fullname = datum.get('qTypeFullName', None)
+        qtype = parse_qtype_fullname(qtype_fullname)
+        for entry in datum.get("assessments", []):
             assessment = entry.get("assessment")
             assessment_id = entry.get("id")
             module_code = entry.get("moduleCode")
             module_id = entry.get("moduleId")
             if "authoring_questionbank_edit" in entry.get("permissions", []):
                 key = (module_code, assessment)
-                if key in assessment_data.module_assessment_pairmap:
-                    logger.warning('%s is already in module_assessment. Skipping', key)
-                assessment_data.module_assessment_pairmap[key] = (
+                if key not in assessment_data.module_assessment_map:
+                    assessment_data.module_assessment_map[key] = {}
+                assessment_data.module_assessment_map[key][qtype] = (
                     module_id,
                     assessment_id,
                 )
