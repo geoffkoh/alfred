@@ -112,7 +112,7 @@ class ActionUpload_MCQ2MySA:
         logger.info("Getting assessment filter")
         self.assessment = parse_assessment_filter(driver.get_assessments_filter())
         logger.info("Received assessment filter")
-        logger.info("%s", pprint.pformat(self.assessment.module_assessment_pairmap))
+        logger.info("%s", pprint.pformat(self.assessment.module_assessment_map))
 
         logger.info("Creating questions")
         counter = 0
@@ -148,16 +148,39 @@ class ActionUpload_MCQ2MySA:
         payload.score = int(question.score)
         payload.estimatedTime = int(question.est_time_min)
 
-        # Adds in assessment and module code
-        mod_assess_pair = self.assessment.module_assessment_pairmap.get(
+        # If the qtype is empty, and there is only one module-assessment
+        # entry, then we still add it in.
+        mod_assess_entries = self.assessment.module_assessment_map.get(
             (question.module, question.assessment)
         )
-        if not mod_assess_pair:
-            logger.warning(
-                "Module %s Assessment %s not found. Skipping question: %s",
-                question.module, question.assessment, question.title
-            )
-            return False
+        if not question.qtype:
+            if len(mod_assess_entries) == 0:
+                logger.error(
+                    'Module %s Assessment %s with correct rights cannot be found. '
+                    'Skipping question: %s',
+                    question.module, question.assessment, question.title
+                )
+                return False
+            elif len(mod_assess_entries) > 1:
+                logger.error(
+                    'Module %s Assessment %s has more than 1 entry. '
+                    'Please provide qualification type in question. '
+                    'Skipping question: %s',
+                    question.module, question.assessment, question.title
+                )
+                return False
+            else:
+                mod_assess_pair = list(mod_assess_entries.values())[0]
+        else:
+            if question.qtype not in mod_assess_entries:
+                logger.error(
+                    'Module %s Assessment %s QType %s not found. '
+                    'Skipping question: %s',
+                    question.module, question.assessment, question.qtype, question.title
+                )
+                return False
+            else:
+                mod_assess_pair = mod_assess_entries.get(question.qtype)
 
         payload.assessmentId = mod_assess_pair[1]
         payload.moduleCode = question.module

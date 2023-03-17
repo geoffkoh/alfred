@@ -13,6 +13,7 @@ from tkinter.scrolledtext import ScrolledText
 from tkinter.filedialog import askopenfilename
 
 # Application imports
+from alfred import __version__
 from alfred.io.question import create_from_file
 from alfred.net.driver.myleo import MyLeoDriver
 from alfred.net.driver.mysa import MySADriver
@@ -43,7 +44,7 @@ class App(tk.Tk):
 
         self.question = None
 
-        self.title("ALFRED v0.1")
+        self.title(f"ALFRED v{__version__}")
 
         # Sets geometry
         window_width = 800
