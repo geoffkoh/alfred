@@ -73,6 +73,15 @@ def create_from_file(filename: str) -> QuestionBank:
     # into a dataframe first
     data = pd.read_excel(filename)
 
+    # Update column names if just A, P, C are found
+    # as they should be 'A marks', 'P marks', 'C marks'
+    if 'A' in data.columns and 'A marks' not in data.columns:
+        data.rename(columns={"A": "A marks"}, inplace=True)
+    if 'P' in data.columns and 'P marks' not in data.columns:
+        data.rename(columns={"P": "P marks"}, inplace=True)
+    if 'C' in data.columns and 'C marks' not in data.columns:
+        data.rename(columns={"C": "C marks"}, inplace=True)
+
     logger.info("Creating new question bank")
     question_bank = QuestionBank()
     question = None
@@ -102,9 +111,12 @@ def create_from_file(filename: str) -> QuestionBank:
             question.score = row.Score
             question.answer = row.Ans
             question.est_time_min = row["Est.time (min)"]
-            question.a_score = row.A if row.A is not np.nan else 0
-            question.c_score = row.C if row.C is not np.nan else 0
-            question.p_score = row.P if row.P is not np.nan else 0
+            question.a_score = row["A marks"] if "A marks" in row and row["A marks"] \
+                is not np.nan else 0
+            question.c_score = row["C marks"] if "C marks" in row and row["C marks"] \
+                is not np.nan else 0
+            question.p_score = row["P marks"] if "P marks" in row and row["C marks"] \
+                is not np.nan else 0
             if "Module Code" in data:
                 if row["Module Code"] is not np.nan:
                     question.module = row["Module Code"]

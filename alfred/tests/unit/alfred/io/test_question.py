@@ -52,4 +52,17 @@ def test_create_from_file():
         assert question.assessment == "CW1"
         assert question.qtype == "CET (AY2022 Term 4)"
  
+    # Case 2: Reads version where the headers are one row
+    sample_filename = os.path.join(
+        Path(__file__).parents[3],
+        "resources",
+        "alfred",
+        "io",
+        "question",
+        "sample_mcq_1.0.3.xlsx",
+    )
+    question_bank = create_from_file(sample_filename)
+    assert question_bank is not None
+    assert len(question_bank.questions) == 3, "There should be only 3 questions"
+
 # end test_create_from_file()
