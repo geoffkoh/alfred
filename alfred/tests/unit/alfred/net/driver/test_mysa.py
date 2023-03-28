@@ -40,6 +40,22 @@ def test_parse_assessment_filter():
         }
     }
 
+    # Case 2: Parse one with makeup
+    data_filename = os.path.join(
+        Path(__file__).parents[4],
+        "resources",
+        "alfred",
+        "net",
+        "driver",
+        "assessment_filter_makeup.json",
+    )
+    with open(data_filename) as file:
+        data = json.load(file)
+
+    result = parse_assessment_filter(data=data)
+    assert ('A3289C', 'EXM1') in result.module_assessment_map
+    assert ('A3289C', 'EXM1 (Make-up)') in result.module_assessment_map
+
 # end test_parse_assessment_filter()
 
 
