@@ -111,12 +111,10 @@ def create_from_file(filename: str) -> QuestionBank:
             question.score = row.Score
             question.answer = row.Ans
             question.est_time_min = row["Est.time (min)"]
-            question.a_score = row["A marks"] if "A marks" in row and row["A marks"] \
-                is not np.nan else 0
-            question.c_score = row["C marks"] if "C marks" in row and row["C marks"] \
-                is not np.nan else 0
-            question.p_score = row["P marks"] if "P marks" in row and row["C marks"] \
-                is not np.nan else 0
+            question.a_score = float(row["A marks"]) if not pd.isna(row["A marks"]) else 0
+            question.c_score = float(row["C marks"]) if not pd.isna(row["C marks"]) else 0
+            question.p_score = float(row["P marks"]) if not pd.isna(row["P marks"]) else 0
+
             if "Module Code" in data:
                 if row["Module Code"] is not np.nan:
                     question.module = row["Module Code"]
