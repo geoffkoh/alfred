@@ -211,12 +211,12 @@ class App(tk.Tk):
 
 def create_start_image():
     """Function to generate the initial image"""
-    pattern = """
+    pattern = f"""
     ___    __    __________  __________ 
    /   |  / /   / ____/ __ \/ ____/ __ \\
   / /| | / /   / /_  / /_/ / __/ / / / /
  / ___ |/ /___/ __/ / _, _/ /___/ /_/ / 
-/_/  |_/_____/_/   /_/ |_/_____/_____/  v0.1                                        
+/_/  |_/_____/_/   /_/ |_/_____/_____/  v{__version__}
 Automation for Learning FRamework for EDucation
     """
     return pattern
