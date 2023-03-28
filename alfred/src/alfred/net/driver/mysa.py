@@ -72,6 +72,10 @@ def parse_assessment_filter(data: Dict) -> AssessmentData:
             assessment_id = entry.get("id")
             module_code = entry.get("moduleCode")
             module_id = entry.get("moduleId")
+            makeup = entry.get("makeup", False)
+            # If it is a make up, we need to update assessment to include (Make-up)
+            if makeup:
+                assessment = f"{assessment} (Make-up)"
             if "authoring_questionbank_edit" in entry.get("permissions", []):
                 key = (module_code, assessment)
                 if key not in assessment_data.module_assessment_map:
