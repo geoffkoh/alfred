@@ -40,6 +40,7 @@ class Payload:
     proficiencyLevel: int = 0
     moduleName: str = "None"
     lessonName: str = "None"
+    status: bool = True
 
 
 @dataclass
@@ -68,7 +69,8 @@ class ActionUpload_MCQ2MyLEO:
     def __init__(self):
         """Constructor"""
         self.url = "https://myleo.rp.edu.sg/Quiz/QuestionBank/QuestionList"
-        self.create_api = "https://myleo.rp.edu.sg/Quiz/api/Question/CreateQuestion"
+        # self.create_api = "https://myleo.rp.edu.sg/Quiz/api/Question/CreateQuestion"
+        self.create_api = "https://myleo.rp.edu.sg/industrystandard/api/v1/quiz/question/createquestion"
 
     # end __init__()
 
@@ -115,7 +117,7 @@ class ActionUpload_MCQ2MyLEO:
         payload.content = json.dumps(asdict(payload_content))
 
         logger.info("Posting question: %s", asdict(payload))
-        response = driver.session.post(self.create_api, data=asdict(payload))
+        response = driver.session.post(self.create_api, json=asdict(payload))
         logger.info("Response %s", response)
         logger.info(response.content)
 
