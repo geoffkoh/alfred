@@ -151,6 +151,7 @@ class App(tk.Tk):
         connected = driver.is_connected()
 
         if not connected:
+            driver.driver.close()
             username = askstring("Username", "Enter username (without @rp.edu.sg)")
             if not username:
                 logger.error('No username given')
@@ -163,8 +164,9 @@ class App(tk.Tk):
                 logger.error('No password given')
                 return
             logger.info("Creating driver for LEO2.0")
+            driver = MyLeoDriver()
             connected = driver.connect(username=username, password=password)
-            
+
         if connected:
             # Creates the action and tries to upload the question
             logger.info("Uploading question")
