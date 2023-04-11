@@ -2,6 +2,7 @@
 
 # Standard import
 from dataclasses import asdict, dataclass, field
+from html import escape
 import json
 import logging
 from typing import Dict, List
@@ -93,22 +94,21 @@ class ActionUpload_MCQ2MyLEO:
         logger.info("Creating question: %s", question.title)
 
         payload = Payload()
-        payload.title = question.title
-        payload.question = question.content
+        payload.title = escape(question.title)
+        payload.question = escape(question.content)
         payload.selectedType = {
             "name": "Multiple Choice",
             "value": 0,
             "isChecked": True,
         }
         payload.score = int(question.score)
-        payload.question = question.content
 
         counter = 1
         payload_content = PayloadContent()
         for option, option_desc in question.options.items():
             item = ChoiceItem(
                 id=f"choice_{counter}",
-                answer=option_desc,
+                answer=escape(option_desc),
                 isCorrect=option == question.answer,
             )
             payload_content.choiceItems.append(asdict(item))
