@@ -2,6 +2,7 @@
 
 # Standard import
 from dataclasses import asdict, dataclass, field
+from html import escape
 import json
 import logging
 import pprint
@@ -66,7 +67,7 @@ def render_question(question: str) -> str:
     content = (
         "<span "
         'data-default-style="{&quot;fontFamily&quot;:&quot;Arial&quot;,&quot;fontSize&quot;:&quot;12pt&quot;}" '
-        f'style="font-family: Arial; font-size: 12pt;">{question}</span>'
+        f'style="font-family: Arial; font-size: 12pt;">{escape(question)}</span>'
     )
     return content
 
@@ -76,7 +77,7 @@ def render_options(option: str) -> str:
     content = (
         "<span "
         'data-default-style="{&quot;fontFamily&quot;:&quot;Arial&quot;,&quot;fontSize&quot;:&quot;12pt&quot;}" '
-        f'style="font-family: Arial; font-size:12pt;">{option}</span>'
+        f'style="font-family: Arial; font-size:12pt;">{escape(option)}</span>'
     )
     return content
 
