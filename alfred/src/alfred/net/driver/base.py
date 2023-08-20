@@ -49,7 +49,12 @@ def create_chrome_driver():
     """Creates the chrome driver"""
     cap = DesiredCapabilities.CHROME.copy()
     cap["goog:loggingPrefs"] = {"performance": "ALL"}  # chromedriver 75+
-    driver = webdriver.Chrome(ChromeDriverManager().install(), desired_capabilities=cap)
+    # We pin the chrome version as 115 has a different location that
+    # is not recognized by the webdriver-manager yet
+    driver = webdriver.Chrome(
+        ChromeDriverManager(version='114.0.5735.90').install(),
+        desired_capabilities=cap
+    )
     return driver
 
 

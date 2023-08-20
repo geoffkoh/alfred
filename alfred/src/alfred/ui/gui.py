@@ -87,7 +87,10 @@ class App(tk.Tk):
             frm_buttons, text="Upload to LEO2.0", command=self.upload_myleo
         )
         btn_upload_mysa = tk.Button(
-            frm_buttons, text="Upload to SA2.0", command=self.upload_mysa
+            frm_buttons,
+            text="Upload to SA2.0",
+            command=self.upload_mysa,
+            state='disabled'
         )
         btn_exit = tk.Button(frm_buttons, text="Exit", command=self.destroy)
 
