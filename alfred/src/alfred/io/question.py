@@ -134,7 +134,7 @@ def create_from_file(filename: str) -> QuestionBank:
                 else:
                     question.qtype = curr_qtype
         elif curr_state == ParseState.CHOICE:
-            question.options[row.Title] = row.Question
+            question.options[row.Title] = str(row.Question)
         else:
             question = None
 

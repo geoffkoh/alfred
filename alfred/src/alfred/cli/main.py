@@ -1,8 +1,6 @@
 # Standard imports
 import sys
 
-sys.path.append("C:\\Cindy D Drive\\Development\\alfred\\alfred\\src")
-
 # Third party imports
 
 # Application imports
